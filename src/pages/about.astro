@@ -1,0 +1,14 @@
+---
+let res = await fetch("https://jsonplaceholder.typicode.com/albums/1/photos")
+let data = await res.json()
+
+
+---
+<h1>About</h1>
+{
+    data.map(e =>(<div>
+        <h1>{e.id}</h1>
+        <h2>{e.title}</h2>
+        <image src={e.url} />
+        </div>))
+}
